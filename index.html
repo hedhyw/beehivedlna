@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Beehive DLNA — android клиент для обзора видео</title>
+        <meta name="description" content="Бесплатный Android DLNA клиент для обзора домашней коллекции фильмов и сериалов">
+        <meta name="author" content="Максим Кривчун, m@hedhyw.ru">
+        <meta name="robots" content="index, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/logo-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/logo-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/logo-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/logo-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/logo-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/logo-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/logo-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/logo-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/logo-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/logo-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/logo-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/logo-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script src="scripts/main.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="images/logo-512x512.png" alt="Beehive DLNA logo" />
+            <h1 id="title">Beehive DLNA<span id="version-small"> 1.0.1</span></h1>
+            <p id="short-description">DLNA клиент для просмотра видео.</p>
+            <a id="google-play-button" href='https://play.google.com/store/apps/details?id=ru.hedhyw.psw&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <img alt='Доступно в Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/ru_badge_web_generic.png'/>
+            </a>
+            <p id="version-large">Версия 1.0.1</p>
+        </header>
+        <section>
+            <h2>Описание</h2>
+            <p id="long-description">
+                Бесплатное Android (4.1+) приложение для обзора домашней
+                коллекции фильмов и сериалов, хранящихся на компьютере,
+                и последующем просмотре на видеоплеере. Из ключевых особенностей
+                — возможность воспроизводить все файлы в директории, используя
+                сторонний плеер. Для работы приложения необходим развернутый в
+                локальной сети DLNA сервер и любой
+                android-видеоплеер, поддерживающий плейлисты m3u
+                (например VLC for Android) {<a href="release/beehive-dlna-last.apk">Скачать APK</a>}
+            </p>
+            <article id="article-screenshots">
+                <h3 class="article-title">Скриншоты</h3>
+                <p class="article-body">
+                    <img src="images/screenshot-mobile-first.png"
+                         alt="Screenshot of Beehive DLNA on mobile device" />
+                    <img src="images/screenshot-mobile-second.png"
+                         alt="Screenshot of Beehive DLNA on mobile device" />
+                    <img src="images/screenshot-mobile-third.png"
+                         alt="Screenshot of Beehive DLNA on mobile device" />
+                </p>
+            </article>
+            <article>
+                <h3 class="article-title">DLNA?</h3>
+                <div class="article-body">
+                    DLNA (англ. Digital Living Network Alliance)
+                    — набор стандартов, позволяющих совместимым устройствам
+                    передавать и принимать по домашней сети различный
+                    медиа-контент (изображения, музыку, видео). 
+                    {<a href="https://ru.wikipedia.org/wiki/DLNA">Википедия</a>}
+                </div>
+            </article>
+            <article>
+                <h3 class="article-title">Выбор DLNA сервера</h3>
+                <div class="article-body">
+                    Plex Media Server — кроссплатформенный сервер, поддерживающий
+                    транскодирование. Умеет брать метаданные из сети. Прост
+                    в установке и настройке, при этом достаточно мощный.
+                    {<a href="https://www.plex.tv/downloads/">Страница загрузки</a>}
+                </div>
+                <div class="article-body">
+                    Kodi — самый популярный и полностью бесплатный комбайн, который
+                    также умеет раздавать видео контент через DLNA. Запускается как замена
+                    окружения рабочего стола, нет фонового режима.
+                    {<a href="https://kodi.tv/download">Страница загрузки</a>}
+                </div>
+                <div class="article-body">
+                    Serviio — DLNA-stream сервер для Windows, Linux, MacOs.
+                    Транскодирование и веб-клиент доступны только в Pro версии.
+                    {<a href="http://www.serviio.org/download">Страница загрузки</a>}
+                </div>
+                <div class="article-body">
+                    Emby Server  — медиа сервер, созданный для организации
+                    медиаконтента и его раздачи на другие устрйоства
+                    {<a href="https://emby.media/download.html">Страница загрузки</a>}
+                </div>
+            </article>
+            <article>
+                <h3 class="article-title">Контактная информация</h3>
+                <div class="article-body">
+                    <p>© 2017 Кривчун Максим, <a href="mailto:m@hedhyw.ru">m@hedhyw.ru</a></p>
+                    <p>Google Play и логотип Google Play являются
+                       товарными знаками корпорации Google Inc.</p>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>

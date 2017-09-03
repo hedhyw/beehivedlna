@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Russo+One);
+
+$font-header: 'Russo One', sans-serif;
+$font: 'PT Sans Narrow', sans-serif;
+
+$primary-color: #4db6ac;
+$accent-color: #0d47a1;
+$accent-color-light: #5472d3;
+
+$text-primary-color: #fff;
+$text-accent-color: #fff;
+
+$background-color: white;
+$content-background-color: #e0e0e0;
+
+$content-max-width: 710px;
+$content-min-width: 300px;
+$content-padding: 30px;
+
+@mixin small_screen {
+    @media screen and (max-height: $break-header),
+           screen and (max-width: $content-max-width+$header-small-height){
+        @content;
+    }
+}
+
+@mixin large_screen {
+    @media screen and (min-height: $break-header)
+        and (min-width: $content-max-width+$header-small-height) {
+        @content;
+    }
+}
+
+@mixin justified_text {
+    text-align: justify;
+    text-indent: 3em;
+    line-height: 1.5;
+    @include small_screen {
+        font-size: 12pt
+    }
+    @include large_screen {
+        font-size: 14pt
+    }
+}
+
+/* <Global> */
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: $background-color;
+    font-family: $font;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: $font-header;
+}
+
+a {
+    color: $accent-color;
+}
+a:hover {
+    color: $accent-color-light;
+    text-decoration: none;
+}
+
+/* </Global> */
+
+
+/* <Header> */
+$break-header: 500px;
+$header-small-height: 400px;
+$header-large-width: 250px;
+
+header {
+    font-family: $font-header;
+    background-color: $primary-color;
+    color: $text-primary-color;
+    text-align: center;
+    
+    @include small_screen {
+        min-width: $content-min-width;
+        height: $header-small-height;
+        width: 100%;
+    }
+    @include large_screen {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 250px;
+    }
+}
+
+
+@include small_screen {
+    #version-large {
+        display: none;
+    }
+}
+@include large_screen {
+    #version-small {
+        display: none;
+    }
+}
+
+header * {
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo {
+    width: 300px;
+}
+
+$google-play-button-small-height: 75px;
+$google-play-button-scale: 646/250;
+#google-play-button img {
+    @include small_screen  {
+        position: absolute;
+        top: $header-small-height - $google-play-button-small-height/2;
+        height: $google-play-button-small-height;
+        width: $google-play-button-small-height * $google-play-button-scale;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    @include large_screen {
+        width: 100%;
+    }
+}
+/* </Header> */
+
+
+/* <Content> */
+
+#long-description {
+    @include justified_text;
+}
+
+section {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: $content-min-width;
+    max-width: $content-max-width;
+    background-color: $content-background-color;
+    padding: $content-padding;
+    @include small_screen {
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+    }
+    @include large_screen {
+        left: $header-large-width+50;
+    }
+    
+}
+
+article {
+    background-color: $content-background-color;
+    .article-body {
+        @include justified_text;
+    }
+    .article-title {
+        color: $accent-color;
+        padding: 10px 0;
+    }
+}
+
+#article-screenshots {
+    .article-body {
+        text-indent: 0;
+        text-align: center;
+    }
+    /*img:active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto auto;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        animation: image-fullscreen 0.6s ease-out;
+    }*/
+    img {
+        width: 25%;
+        max-width: 160px;
+    }
+    @keyframes image-fullscreen {
+        0%   { width: 0%; height: 0%; opacity: 0.5 }
+        100% { width: auto; height: 854px; opacity: 1.0}
+    }
+}
+/* </Content> */
+
+#image-full-bg {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    background: rgba(0,0,0,0.5);
+}
+
+.image-full-hidden {
+    animation: fullscreen-out 600ms ease-out forwards;
+}
+
+.image-full-showed {
+    animation: fullscreen-in 600ms  ease-in forwards;
+}
+
+#image-full {
+    box-sizing: border-box;
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes fullscreen-in {
+    0%   { padding: 40%; opacity: 0}
+    100% { padding: 0%; opacity: 1.0 }
+}
+    
+@keyframes fullscreen-out {
+    0%   { padding: 0%; opacity: 1.0 }
+    99% { padding: 50%; left: initial }
+    100% { left: -200%; opacity: 0; padding: 100%; }
+}

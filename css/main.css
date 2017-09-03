@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Russo+One);
+/* <Global> */
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: white;
+  font-family: "PT Sans Narrow", sans-serif; }
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: "Russo One", sans-serif; }
+
+a {
+  color: #0d47a1; }
+
+a:hover {
+  color: #5472d3;
+  text-decoration: none; }
+
+/* </Global> */
+/* <Header> */
+header {
+  font-family: "Russo One", sans-serif;
+  background-color: #4db6ac;
+  color: #fff;
+  text-align: center; }
+  @media screen and (max-height: 500px), screen and (max-width: 1110px) {
+    header {
+      min-width: 300px;
+      height: 400px;
+      width: 100%; } }
+  @media screen and (min-height: 500px) and (min-width: 1110px) {
+    header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 250px; } }
+
+@media screen and (max-height: 500px), screen and (max-width: 1110px) {
+  #version-large {
+    display: none; } }
+@media screen and (min-height: 500px) and (min-width: 1110px) {
+  #version-small {
+    display: none; } }
+header * {
+  width: 100%;
+  z-index: 1000; }
+
+#logo {
+  width: 300px; }
+
+@media screen and (max-height: 500px), screen and (max-width: 1110px) {
+  #google-play-button img {
+    position: absolute;
+    top: 362.5px;
+    height: 75px;
+    width: 193.8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; } }
+@media screen and (min-height: 500px) and (min-width: 1110px) {
+  #google-play-button img {
+    width: 100%; } }
+
+/* </Header> */
+/* <Content> */
+#long-description {
+  text-align: justify;
+  text-indent: 3em;
+  line-height: 1.5; }
+  @media screen and (max-height: 500px), screen and (max-width: 1110px) {
+    #long-description {
+      font-size: 12pt; } }
+  @media screen and (min-height: 500px) and (min-width: 1110px) {
+    #long-description {
+      font-size: 14pt; } }
+
+section {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 300px;
+  max-width: 710px;
+  background-color: #e0e0e0;
+  padding: 30px; }
+  @media screen and (max-height: 500px), screen and (max-width: 1110px) {
+    section {
+      left: 0;
+      top: 0;
+      margin: 0 auto; } }
+  @media screen and (min-height: 500px) and (min-width: 1110px) {
+    section {
+      left: 300px; } }
+
+article {
+  background-color: #e0e0e0; }
+  article .article-body {
+    text-align: justify;
+    text-indent: 3em;
+    line-height: 1.5; }
+    @media screen and (max-height: 500px), screen and (max-width: 1110px) {
+      article .article-body {
+        font-size: 12pt; } }
+    @media screen and (min-height: 500px) and (min-width: 1110px) {
+      article .article-body {
+        font-size: 14pt; } }
+  article .article-title {
+    color: #0d47a1;
+    padding: 10px 0; }
+
+#article-screenshots {
+  /*img:active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto auto;
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      animation: image-fullscreen 0.6s ease-out;
+  }*/ }
+  #article-screenshots .article-body {
+    text-indent: 0;
+    text-align: center; }
+  #article-screenshots img {
+    width: 25%;
+    max-width: 160px; }
+@keyframes image-fullscreen {
+  0% {
+    width: 0%;
+    height: 0%;
+    opacity: 0.5; }
+  100% {
+    width: auto;
+    height: 854px;
+    opacity: 1.0; } }
+/* </Content> */
+#image-full-bg {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.5); }
+
+.image-full-hidden {
+  animation: fullscreen-out 600ms ease-out forwards; }
+
+.image-full-showed {
+  animation: fullscreen-in 600ms  ease-in forwards; }
+
+#image-full {
+  box-sizing: border-box;
+  max-height: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+@keyframes fullscreen-in {
+  0% {
+    padding: 40%;
+    opacity: 0; }
+  100% {
+    padding: 0%;
+    opacity: 1; } }
+@keyframes fullscreen-out {
+  0% {
+    padding: 0%;
+    opacity: 1; }
+  99% {
+    padding: 50%;
+    left: initial; }
+  100% {
+    left: -200%;
+    opacity: 0;
+    padding: 100%; } }
+
+/*# sourceMappingURL=main.css.map */
