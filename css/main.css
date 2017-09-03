@@ -28,7 +28,7 @@ header {
   text-align: center; }
   @media screen and (max-height: 500px), screen and (max-width: 1110px) {
     header {
-      min-width: 300px;
+      min-width: 320px;
       height: 400px;
       width: 100%; } }
   @media screen and (min-height: 500px) and (min-width: 1110px) {
@@ -82,7 +82,7 @@ section {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  min-width: 300px;
+  min-width: 320px;
   max-width: 710px;
   background-color: #e0e0e0;
   padding: 30px; }
